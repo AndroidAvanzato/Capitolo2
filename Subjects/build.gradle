@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "it.androidavanzato.rxsubjects"
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        buildConfigField "boolean", "ALWAYS_SHOW_WIZARD", "false"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'io.reactivex:rxandroid:0.24.0'
+}

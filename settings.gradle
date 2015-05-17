@@ -1,0 +1,1 @@
+include ':Weather', ':Subjects', ':Login', ':Autocomplete', ':LifeCycle'
